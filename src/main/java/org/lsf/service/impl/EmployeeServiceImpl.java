@@ -1,6 +1,7 @@
 package org.lsf.service.impl;
 
 import org.lsf.dao.EmployeeMapper;
+import org.lsf.pojo.Department;
 import org.lsf.pojo.Employee;
 import org.lsf.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,4 +29,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee querybyID(Integer id) {
         return employeeMapper.selectByPrimaryKeyWithDept(id);
     }
+
+
 }

@@ -2,6 +2,7 @@ package org.lsf.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.lsf.pojo.Department;
 import org.lsf.pojo.Employee;
 import org.lsf.pojo.Msg;
 import org.lsf.service.EmployeeService;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -24,7 +26,7 @@ public class EmployeeController {
     @Qualifier(value = "employeeService")
     EmployeeService employeeService;
 
-    @RequestMapping("/emps")
+    //@RequestMapping("/emps")
     public ModelAndView getEmps(@RequestParam(value = "pageNumber",defaultValue = "1") Integer pageNumber) {
         ModelAndView mav = new ModelAndView("list");
 
@@ -43,9 +45,9 @@ public class EmployeeController {
 
     /*查询 ajax*/
 
-    /*@RequestMapping("/emps")
+    @RequestMapping("/emps")
     @ResponseBody
-    */public Msg getEmpWithJson(@RequestParam(value = "pageNumber",defaultValue = "1") Integer pageNumber){
+    public Msg getEmpWithJson(@RequestParam(value = "pageNumber",defaultValue = "1") Integer pageNumber){
 
         //引入分页查询,传递 页码 和 分页大小
         PageHelper.startPage(pageNumber,5);
@@ -55,7 +57,6 @@ public class EmployeeController {
 
         return Msg.success().add("pageInfo",pi);
     }
-
 
 
     /*用于简单测试*/

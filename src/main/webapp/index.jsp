@@ -31,61 +31,114 @@
     <title>员工列表</title>
 </head>
 <body>
-<!-- 搭建显示页面 -->
-<div class="container">
-    <!--标题  -->
-    <div class="row">
-        <div class="col-md-12">
-            <h1>SSM-CRUD</h1>
+    <%--模态框,即弹出的页面:新增按钮--%>
+    <!-- Modal -->
+    <div class="modal fade" id="empAddModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="empName_add" class="col-sm-2 control-label">empName</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="empName_add" name="empName" placeholder="林盛锋">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_add" class="col-sm-2 control-label">email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="email_add" name = "email" placeholder="emil@emai.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_add" class="col-sm-2 control-label">gender</label>
+                            <div class="col-sm-10">
+                                <%--同组单选按钮:name要一致--%>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" id="gender_add_1" value="M" checked="checked"> 男
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" id="gender_add_2" value="G"> 女
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_add" class="col-sm-2 control-label">部门</label>
+                            <div class="col-sm-4">
+                                <select class="form-control"  id="dId_form">
+
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- 按钮 -->
-    <div class="row">
-        <div class="col-md-4 col-md-offset-8">
-            <button class="btn btn-info">新增</button>
-            <button class="btn btn-danger">删除</button>
+    <!-- 搭建显示页面 -->
+    <div class="container">
+        <!--标题  -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SSM-CRUD</h1>
+            </div>
+        </div>
+        <!-- 按钮 -->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8">
+                <button class="btn btn-info" id="emp_Add_Modal_btn">新增</button>
+                <button class="btn btn-danger">删除</button>
+            </div>
+        </div>
+        <!-- 显示表格数据-->
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-hover" id="emps_table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>empName</th>
+                            <th>gender</th>
+                            <th>email</th>
+                            <th>deptName</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <!-- 显示分页信息 -->
+        <div class="row">
+            <%--分页文字信息--%>
+            <div class="col-md-6" id="page_Info_area">
+
+            </div>
+
+            <%--分页条信息--%>
+            <div class="col-md-6" id="page_nav_area">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination" >
+
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
-    <!-- 显示表格数据-->
-    <div class="row">
-        <div class="col-lg-12">
-            <table class="table table-hover" id="emps_table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>empName</th>
-                        <th>gender</th>
-                        <th>email</th>
-                        <th>deptName</th>
-                        <th>Option</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                </tbody>
-
-            </table>
-        </div>
-    </div>
-    <!-- 显示分页信息 -->
-    <div class="row">
-        <%--分页文字信息--%>
-        <div class="col-md-6" id="page_Info_area">
-
-        </div>
-
-        <%--分页条信息--%>
-        <div class="col-md-6" id="page_nav_area">
-            <nav aria-label="Page navigation">
-                <ul class="pagination" >
-
-                </ul>
-            </nav>
-        </div>
-    </div>
-</div>
-
     <script type="text/javascript">
         //1.页面加载完成后发送ajax请求,要到分页信息
         $(function(){
@@ -207,9 +260,6 @@
             /*
             * 构建完成
             * */
-
-
-
             $.each(pageInfo.navigatepageNums,function (index,item) {
                 var pageNumber = $("<li></li>").append($("<a></a>").append(item).attr("href","#"));
                 ul.append(pageNumber);
@@ -227,6 +277,32 @@
             var nav = $("<nav></nav>").append(ul);
             nav.appendTo("#page_nav_area");
         }
+
+        function build_modal_body(result){
+            $("#dId_form").empty();
+            var depts_tmp = result.extend.depts;
+
+            $.each(depts_tmp,function (index,item) {
+                var base_option = $("<option></option>").append(item.deptName).appendTo($("#dId_form"));
+            });
+        }
+
+        $("#emp_Add_Modal_btn").click(function () {
+
+            //发出ajax请求
+            $.ajax({
+                url:"${APP_PATH}/departmentController/查询部门信息",
+                type:"get",
+                success:function (result) {
+                    // console.log(result);
+                    build_modal_body(result);
+                }
+            });
+
+            //弹出对话框
+            $("#empAddModal").modal();
+        });
+
     </script>
 </body>
 </html>
