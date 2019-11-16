@@ -9,9 +9,7 @@ import org.lsf.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -45,7 +43,7 @@ public class EmployeeController {
 
     /*查询 ajax*/
 
-    @RequestMapping("/emps")
+    @RequestMapping(value = "/emps",method = RequestMethod.GET)
     @ResponseBody
     public Msg getEmpWithJson(@RequestParam(value = "pageNumber",defaultValue = "1") Integer pageNumber){
 
@@ -56,6 +54,28 @@ public class EmployeeController {
         PageInfo pi = new PageInfo(emps,5);
 
         return Msg.success().add("pageInfo",pi);
+    }
+
+
+
+    @RequestMapping(value = "/emps",method = RequestMethod.POST)
+    @ResponseBody
+    public Msg addEmpWithJson(Employee employee){
+        employeeService.saveEmp(employee);
+        return Msg.success();
+    }
+
+
+    //用于校验用户名是否可用
+    @RequestMapping(value = "/checkEmpName",method = RequestMethod.GET)
+    @ResponseBody
+    public Msg checkEmpName(@RequestParam("empName") String empName){
+        boolean b = employeeService.checkEmpName(empName);
+        if (b){
+            return Msg.success();
+        } else {
+            return Msg.fail();
+        }
     }
 
 

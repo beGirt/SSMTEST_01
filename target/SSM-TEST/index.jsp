@@ -41,21 +41,23 @@
                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="save_emp_form">
                         <div class="form-group">
                             <label for="empName_add" class="col-sm-2 control-label">empName</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="empName_add" name="empName" placeholder="林盛锋">
+                                <input type="text" class="form-control" id="empName_add" name="empName" placeholder="林盛锋" aria-describedby="helpBlock1">
+                                <span id="helpBlock1" class="help-block"></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email_add" class="col-sm-2 control-label">email</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="email_add" name = "email" placeholder="emil@emai.com">
+                                <input type="text" class="form-control" id="email_add" name = "email" placeholder="emil@emai.com" aria-describedby="helpBlock2">
+                                <span id="helpBlock2" class="help-block"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email_add" class="col-sm-2 control-label">gender</label>
+                            <label class="col-sm-2 control-label">gender</label>
                             <div class="col-sm-10">
                                 <%--同组单选按钮:name要一致--%>
                                 <label class="radio-inline">
@@ -67,20 +69,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email_add" class="col-sm-2 control-label">部门</label>
-                            <div class="col-sm-4">
-                                <select class="form-control"  id="dId_form">
-
-                                </select>
+                            <label class="col-sm-2 control-label">部门</label>
+                            <div class="col-sm-4" id="dId_form">
                             </div>
                         </div>
-
-
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" id="save_emp_btn">新增</button>
                 </div>
             </div>
         </div>
@@ -281,26 +278,139 @@
         function build_modal_body(result){
             $("#dId_form").empty();
             var depts_tmp = result.extend.depts;
-
+            var select_tmp = $("<select></select>").addClass("form-control").attr("name","dId");
             $.each(depts_tmp,function (index,item) {
-                var base_option = $("<option></option>").append(item.deptName).appendTo($("#dId_form"));
+                var tmp = $("<option></option>").append(item.deptName);
+                tmp.attr("value",item.deptId);
+                select_tmp.append(tmp);
             });
+            select_tmp.appendTo($("#dId_form"));
         }
 
-        $("#emp_Add_Modal_btn").click(function () {
+        /*Jquery使用 val()方法取值,不是value()*/
+        /*正则表达式要注意空格*/
+        function checkout_Emp_Form(){
+            var emp_Name = $("#empName_add").val();
+            // console.log(emp_Name);
+            /* | (^[\u2E80-\u9FFF]{2,5}$) */
+            var check_emp_Name = /(^[a-zA-Z0-9_-]{3,16}$)|(^[\u2E80-\u9FFF]{2,5}$)/;
+            var emp_email = $("#email_add").val();
+            var check_email = 	/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ ;
 
-            //发出ajax请求
+
+            //检查前先清空状态
+
+            if (check_emp_Name.test(emp_Name) == false){
+                // alert("姓名格式错误");
+                /*修改提示信息的显示*/
+                /*
+                $("#empName_add").parent().addClass("has-error");
+                $("#empName_add").next("span").text("姓名格式错误");
+                */
+                show_validate_msg($("#empName_add"),"error","姓名格式错误");
+                return false;
+            } else {
+                show_validate_msg($("#empName_add"),"success","");
+                /*
+                $("#empName_add").parent().addClass("has-success");
+                $("#empName_add").next("span").text("");
+                */
+            }
+            if (check_email.test(emp_email) == false){
+                show_validate_msg($("#email_add"),"error","邮箱格式错误");
+                // alert("邮箱格式错误");
+                /*$("#email_add").parent().addClass("has-error");
+                $("#email_add").next("span").text("邮箱格式错误");*/
+                return false;
+            } else {
+                show_validate_msg($("#email_add"),"success","");
+                /*$("#email_add").parent().addClass("has-success");
+                $("#email_add").next("span").text("");*/
+            }
+            return true;
+        }
+
+        //显示span信息
+        function show_validate_msg(ele,status,msg){
+            /*先清空样式*/
+            $(ele).parent().removeClass("has-success has-error");
+            $(ele).next("span").text("");
+            if (status == "success"){
+                $(ele).parent().addClass("has-success");
+                $(ele).next("span").text(msg);
+            } else if (status == "error"){
+                $(ele).parent().addClass("has-error");
+                $(ele).next("span").text(msg);
+            }
+        }
+
+
+        /*点击新增按钮 弹出模态框*/
+        $("#emp_Add_Modal_btn").click(function () {
+            /*清楚表单数据*/
+            $("#empAddModal form")[0].reset();
+            var totalRecord;
+            /*发出ajax请求 显示部门信息*/
             $.ajax({
-                url:"${APP_PATH}/departmentController/查询部门信息",
+                url:"${APP_PATH}/DEPTController/查询部门信息",
                 type:"get",
                 success:function (result) {
                     // console.log(result);
                     build_modal_body(result);
                 }
             });
-
             //弹出对话框
             $("#empAddModal").modal();
+        });
+
+        //校验用户名是否可用
+        $("#empName_add").change(function () {
+            //发送ajax请求 校验用户名是否可用
+            var empName = this.value;
+            $.ajax({
+                url:"${APP_PATH}/EMPController/checkEmpName",
+                type:"get",
+                data:"empName="+empName,
+                success:function (result) {
+                    if (result.code == 100){
+                        show_validate_msg($("#empName_add"),"success","用户名可用");
+                        $("#save_emp_btn").attr("empName_check_val","success");
+                    } else if (result.code == 200) {
+                        show_validate_msg($("#empName_add"),"error","用户名不可用");
+                        $("#save_emp_btn").attr("empName_check_val","error");
+                    }
+                }
+            });
+        });
+
+        //新增按钮的单击事件
+        $("#save_emp_btn").click(function () {
+            // alert($("#save_emp_form").serialize());
+            if (checkout_Emp_Form() == false){
+                return false;
+            } else if (this.attr("empName_check_val") == "error"){
+                show_validate_msg($("#empName_add"),"error","用户名不可用");
+                return false;
+            }
+            $.ajax({
+                url:"${APP_PATH}/EMPController/emps",
+                type:"post",
+                data:$("#save_emp_form").serialize(),
+                success:function () {
+                    alert("添加成功");
+                    //保存成功
+                    /*
+                    关闭模态框
+                     */
+                    $("#empAddModal").modal("hide");
+                    /*
+                    跳转到最后一页
+                    给定一个非常大的页数
+                    分页插件会跳到最后一页
+                     */
+                    to_page(9999);
+                }
+            });
         });
 
     </script>

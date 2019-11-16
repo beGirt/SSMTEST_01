@@ -32,4 +32,17 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
+  //URI采用REST风格
+  <!-- 增加过滤器 -->
+  <!--支持 POST : DELETE : PUT : GET-->
+  <filter>
+    <filter-name>HiddenHttpMethodFilte</filter-name>
+    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>HiddenHttpMethodFilte</filter-name>
+    <!-- 拦截所有请求的方式 -->
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
 </web-app>

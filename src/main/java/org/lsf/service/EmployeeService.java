@@ -8,4 +8,6 @@ import java.util.List;
 public interface EmployeeService {
     public List<Employee> getAll();
     public Employee querybyID(Integer id);
+    public void saveEmp(Employee employee);
+    boolean checkEmpName(String empName);
 }
