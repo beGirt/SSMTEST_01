@@ -6,20 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72e01cd4-9a11-4fc6-88c6-0fedd178a8e0" name="Default Changelist" comment="">
+    <list default="true" id="72e01cd4-9a11-4fc6-88c6-0fedd178a8e0" name="Default Changelist" comment="&quot;2019-11-17 : 修改代码&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lsf/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lsf/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lsf/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lsf/pojo/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/pojo/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/pojo/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/lsf/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lsf/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/lsf/pojo/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lsf/pojo/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -304,7 +292,7 @@
       <workItem from="1573712648142" duration="49000" />
       <workItem from="1573739316856" duration="7388000" />
       <workItem from="1573777686579" duration="23390000" />
-      <workItem from="1573967797663" duration="13327000" />
+      <workItem from="1573967797663" duration="13863000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;2019-11-13 : 0.0.2&quot;">
       <created>1573645642569</created>
