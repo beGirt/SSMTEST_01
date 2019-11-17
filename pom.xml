@@ -119,6 +119,15 @@
       <version>${spring.version}</version>
     </dependency>
 
+    <!--支持JSR303校验-->
+    <!--Hibernate-validator-->
+    <dependency>
+      <groupId>org.hibernate.validator</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>6.0.16.Final</version>
+    </dependency>
+
+
 
     <!--数据库连接池-->
     <dependency>

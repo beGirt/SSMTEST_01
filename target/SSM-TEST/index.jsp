@@ -300,6 +300,7 @@
 
             //检查前先清空状态
 
+
             if (check_emp_Name.test(emp_Name) == false){
                 // alert("姓名格式错误");
                 /*修改提示信息的显示*/
@@ -307,7 +308,7 @@
                 $("#empName_add").parent().addClass("has-error");
                 $("#empName_add").next("span").text("姓名格式错误");
                 */
-                show_validate_msg($("#empName_add"),"error","姓名格式错误");
+                show_validate_msg($("#empName_add"),"error","姓名格式不合法");
                 return false;
             } else {
                 show_validate_msg($("#empName_add"),"success","");
@@ -330,11 +331,19 @@
             return true;
         }
 
+        /*完整重置表单*/
+        function reset_form(ele){
+            $(ele)[0].reset();
+            $(ele).find("*").removeClass("has-success has-error");
+            $(ele).find(".help-block").text("");
+        }
+
         //显示span信息
         function show_validate_msg(ele,status,msg){
-            /*先清空样式*/
+            /*显示样式前先清空样式*/
             $(ele).parent().removeClass("has-success has-error");
             $(ele).next("span").text("");
+
             if (status == "success"){
                 $(ele).parent().addClass("has-success");
                 $(ele).next("span").text(msg);
@@ -344,11 +353,10 @@
             }
         }
 
-
-        /*点击新增按钮 弹出模态框*/
+        /*点击 新增(页面) 按钮 弹出模态框*/
         $("#emp_Add_Modal_btn").click(function () {
-            /*清楚表单数据*/
-            $("#empAddModal form")[0].reset();
+            /*重置表单数据*/
+            reset_form($("#empAddModal form"));
             var totalRecord;
             /*发出ajax请求 显示部门信息*/
             $.ajax({
@@ -363,7 +371,7 @@
             $("#empAddModal").modal();
         });
 
-        //校验用户名是否可用
+        /*校验用户名是否可用(是否重复)*/
         $("#empName_add").change(function () {
             //发送ajax请求 校验用户名是否可用
             var empName = this.value;
@@ -373,23 +381,26 @@
                 data:"empName="+empName,
                 success:function (result) {
                     if (result.code == 100){
-                        show_validate_msg($("#empName_add"),"success","用户名可用");
+                        show_validate_msg($("#empName_add"),"success","");
                         $("#save_emp_btn").attr("empName_check_val","success");
                     } else if (result.code == 200) {
-                        show_validate_msg($("#empName_add"),"error","用户名不可用");
+                        show_validate_msg($("#empName_add"),"error",result.extend.va_msg);
+                        /*用于传输错误消息给新增按钮单击事件*/
                         $("#save_emp_btn").attr("empName_check_val","error");
                     }
                 }
             });
         });
 
-        //新增按钮的单击事件
+
+        /* (模态框中的新增按钮) 的单击事件*/
         $("#save_emp_btn").click(function () {
             // alert($("#save_emp_form").serialize());
-            if (checkout_Emp_Form() == false){
+            if (this.attr("empName_check_val") == "error"){/*新增按钮的单击事件:(姓名不合法 阻止进行ajax请求添加) */
+                alert("姓名错误");
                 return false;
-            } else if (this.attr("empName_check_val") == "error"){
-                show_validate_msg($("#empName_add"),"error","用户名不可用");
+            }
+            if (checkout_Emp_Form() == false){/*新增按钮的单击事件:(数据出现不合法信息 阻止进行ajax请求添加)*/
                 return false;
             }
             $.ajax({

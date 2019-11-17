@@ -28,6 +28,4 @@
     <!-- JSR303校验 快捷的ajax请求 ... 映射动态请求 -->
     <mvc:annotation-driven></mvc:annotation-driven>
 
-
-
 </beans>

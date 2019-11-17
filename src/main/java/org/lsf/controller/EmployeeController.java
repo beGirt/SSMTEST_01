@@ -9,9 +9,12 @@ import org.lsf.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,9 +63,18 @@ public class EmployeeController {
 
     @RequestMapping(value = "/emps",method = RequestMethod.POST)
     @ResponseBody
-    public Msg addEmpWithJson(Employee employee){
-        employeeService.saveEmp(employee);
-        return Msg.success();
+    public Msg addEmpWithJson(@Valid Employee employee, BindingResult bindingResult){
+        if (bindingResult.hasErrors()){
+            List<FieldError> fieldErrors = bindingResult.getFieldErrors();
+            for (FieldError fieldError : fieldErrors){
+                System.out.println("错误的字段名:"+fieldError.getField());
+                System.out.println("错误的信息:"+fieldError.getDefaultMessage());
+            }
+            return Msg.fail();
+        } else {
+            employeeService.saveEmp(employee);
+            return Msg.success();
+        }
     }
 
 
@@ -70,12 +82,22 @@ public class EmployeeController {
     @RequestMapping(value = "/checkEmpName",method = RequestMethod.GET)
     @ResponseBody
     public Msg checkEmpName(@RequestParam("empName") String empName){
+
+        //第一步判断用户名是否合法
+        String regx = "(^[a-zA-Z0-9_-]{3,16}$)|(^[\\u2E80-\\u9FFF]{2,5}$)";
+        if (!empName.matches(regx)){
+            return Msg.fail().add("va_msg","姓名格式不合法");
+        }
+
+
+        //第二步判断用户名是否重复
         boolean b = employeeService.checkEmpName(empName);
         if (b){
             return Msg.success();
         } else {
-            return Msg.fail();
+            return Msg.fail().add("va_msg","该姓名不可用(重复)");
         }
+
     }
 
 

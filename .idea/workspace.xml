@@ -8,28 +8,27 @@
   <component name="ChangeListManager">
     <list default="true" id="72e01cd4-9a11-4fc6-88c6-0fedd178a8e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/lsf/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lsf/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lsf/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lsf/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lsf/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lsf/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbproperties.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lsf/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lsf/pojo/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/dbproperties.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/pojo/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/pojo/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/springmvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SSM-TEST/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbproperties.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/lsf/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lsf/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/lsf/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lsf/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/lsf/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lsf/service/impl/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lsf/pojo/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lsf/pojo/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SSMTEST" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,7 +70,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -304,7 +303,8 @@
       <workItem from="1573645253552" duration="1011000" />
       <workItem from="1573712648142" duration="49000" />
       <workItem from="1573739316856" duration="7388000" />
-      <workItem from="1573777686579" duration="22295000" />
+      <workItem from="1573777686579" duration="23390000" />
+      <workItem from="1573967797663" duration="13327000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;2019-11-13 : 0.0.2&quot;">
       <created>1573645642569</created>
@@ -320,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573746518926</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;2019-11-16 : 修改代码&quot;">
+      <created>1573874725651</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573874725651</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +349,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;2019-11-13 : 0.0.2&quot;" />
     <MESSAGE value="&quot;2019-11-14 : 修改代码&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;2019-11-14 : 修改代码&quot;" />
+    <MESSAGE value="&quot;2019-11-16 : 修改代码&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;2019-11-16 : 修改代码&quot;" />
   </component>
 </project>
