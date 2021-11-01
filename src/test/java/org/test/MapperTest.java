@@ -1,5 +1,7 @@
 package org.test;
 
+import java.util.Random;
+import java.util.UUID;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,11 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:applicationContext.xml","classpath:spring/applicationContext-*.xml"})
@@ -86,9 +83,11 @@ public class MapperTest {
         Employee employee = employeeMapper.selectByPrimaryKeyWithDept(1);
         System.out.println(employee.getEmpId() +" " + employee.getEmpName());
     }
+
+    @Test
     public void init(){
         EmployeeMapper BATCH_mapper = sqlSession.getMapper(EmployeeMapper.class);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 10; i++) {
             String name = UUID.randomUUID().toString().substring(0,5) + i;
             int random = new Random().nextInt( 2 ) + 1;
             BATCH_mapper.insertSelective(new Employee(null, name,"M",name+"@lsf.com", random));

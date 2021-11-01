@@ -208,7 +208,7 @@
 
             var ul = $("<ul></ul>").addClass("pagination");
 
-            //page_nav_area
+            //page_nav_atoPagerea
             var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href","#"));
             var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href","#"));
             var prePageLi = $("<li></li>").append($("<a></a>").append("&laquo;").attr("href","#"));

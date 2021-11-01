@@ -5,18 +5,48 @@
       <artifact name="SSM-TEST:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="72e01cd4-9a11-4fc6-88c6-0fedd178a8e0" name="Default Changelist" comment="&quot;2019-11-17 : 修改代码&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/Online-employee-management-system.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lsf/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lsf/controller/DepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbproperties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/test/MapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/test/MapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/META-INF/SSMTEST_01.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/dbproperties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/controller/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/controller/DepartmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/test/MBGTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/org/lsf/test/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/lib/junit-jupiter-5.6.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/lib/junit-jupiter-api-5.6.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/lib/junit-jupiter-engine-5.6.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/lib/junit-jupiter-params-5.6.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/lib/junit-platform-commons-1.6.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSM-TEST/WEB-INF/lib/junit-platform-engine-1.6.0-M1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dbproperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbproperties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/lsf/controller/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/lsf/controller/DepartmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/test/MapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/test/MapperTest.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="SSMTEST" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,23 +72,30 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\MavenFolder2" />
-        <option name="mavenHome" value="D:/tool/maven" />
-        <option name="userSettingsFile" value="D:\tool\maven\conf\settings.xml" />
+        <option name="mavenHome" value="/opt/maven" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="1TPHwq52GexSmnjPAPUQ4qBBaxX" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -74,19 +111,7 @@
       <recent name="E:\项目开发\SSMTEST_01\src\main\resources\spring" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
+  <component name="RunManager" selected="Smart Tomcat.Tomcat">
     <configuration name="MVCTest.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSMTEST_01" />
       <extension name="coverage">
@@ -98,22 +123,6 @@
       <option name="PACKAGE_NAME" value="org.test" />
       <option name="MAIN_CLASS_NAME" value="org.test.MVCTest" />
       <option name="METHOD_NAME" value="testPage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapperTest.DeptMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSMTEST_01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.test" />
-      <option name="MAIN_CLASS_NAME" value="org.test.MapperTest" />
-      <option name="METHOD_NAME" value="DeptMapperTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,6 +149,22 @@
       <option name="PACKAGE_NAME" value="org.test" />
       <option name="MAIN_CLASS_NAME" value="org.test.MapperTest" />
       <option name="METHOD_NAME" value="EmployeeMapperTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapperTest.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Online-employee-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.test" />
+      <option name="MAIN_CLASS_NAME" value="org.test.MapperTest" />
+      <option name="METHOD_NAME" value="init" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -251,27 +276,67 @@
         </option>
       </method>
     </configuration>
+    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="adminPort" value="8005" />
+      <option name="contextPath" value="/Online-employee-management-system" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8999" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat 9.0.33" />
+          <option name="number" value="0" />
+          <option name="path" value="/opt/apache-tomcat-9.0.33" />
+          <option name="version" value="9.0.33.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="-Dspring.profiles.active=dev -Xmx2048m -Xms768m" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="adminPort" value="8005" />
+      <option name="contextPath" value="/Online-employee-management-system" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8080" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat 9.0.33" />
+          <option name="number" value="0" />
+          <option name="path" value="/opt/apache-tomcat-9.0.33" />
+          <option name="version" value="9.0.33.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.MapperTest.DeptMapperTest" />
-      <item itemvalue="JUnit.test.testPage" />
       <item itemvalue="JUnit.MVCTest.testPage" />
+      <item itemvalue="JUnit.MapperTest.DeptMapperTest" />
       <item itemvalue="JUnit.MapperTest.EmployeeMapperTest" />
+      <item itemvalue="JUnit.MapperTest.init" />
       <item itemvalue="JUnit.MapperTest.queryByid" />
+      <item itemvalue="JUnit.test.testPage" />
+      <item itemvalue="Smart Tomcat.Tomcat" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.26" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MapperTest.init" />
         <item itemvalue="JUnit.MapperTest.EmployeeMapperTest" />
         <item itemvalue="JUnit.MapperTest.queryByid" />
         <item itemvalue="JUnit.MVCTest.testPage" />
         <item itemvalue="JUnit.test.testPage" />
-        <item itemvalue="JUnit.MapperTest.DeptMapperTest" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="showServicesTree" value="false" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -293,6 +358,12 @@
       <workItem from="1573739316856" duration="7388000" />
       <workItem from="1573777686579" duration="23390000" />
       <workItem from="1573967797663" duration="13863000" />
+      <workItem from="1618194556588" duration="3695000" />
+      <workItem from="1618261168136" duration="598000" />
+      <workItem from="1618233045745" duration="72000" />
+      <workItem from="1618233466571" duration="1939000" />
+      <workItem from="1618276284669" duration="1788000" />
+      <workItem from="1618903215802" duration="560000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;2019-11-13 : 0.0.2&quot;">
       <created>1573645642569</created>
@@ -319,25 +390,35 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;2019-11-13 : 0.0.2&quot;" />
     <MESSAGE value="&quot;2019-11-14 : 修改代码&quot;" />
     <MESSAGE value="&quot;2019-11-16 : 修改代码&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;2019-11-16 : 修改代码&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/lsf/controller/EmployeeController.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

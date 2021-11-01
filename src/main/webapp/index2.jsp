@@ -5,10 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%--跳转到分页查询的 Controller : /EMPController/emps --%>
-    <%--<jsp:forward page="/EMPController/emps"></jsp:forward>--%>
 </head>
 <body>
-    你好
+    <jsp:forward page="/EMPController/emps"></jsp:forward>
 </body>
 </html>

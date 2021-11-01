@@ -1,5 +1,6 @@
 package org.lsf.controller;
 
+import javax.servlet.http.HttpServlet;
 import org.lsf.pojo.Department;
 import org.lsf.pojo.Msg;
 import org.lsf.service.DepartmentService;
