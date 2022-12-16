@@ -20,7 +20,7 @@
 
     <!--Spring 的版本号-->
     <!--使用4.3.9.RELEASE版本-->
-    <spring.version>4.3.9.RELEASE</spring.version>
+    <spring.version>5.2.20.RELEASE</spring.version>
     <!--Mybatis的版本号-->
     <!--使用3.5.2版本-->
     <mybatis.version>3.5.2</mybatis.version>
